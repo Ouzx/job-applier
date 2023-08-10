@@ -24,6 +24,9 @@ class Scraper:
         self.driver.maximize_window()
         print('Scraping...')
 
+    def quit(self):
+        self.driver.quit()
+
     @ staticmethod
     def __get_options():
         ua = UserAgent()
