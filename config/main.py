@@ -1,4 +1,4 @@
-link_path = 'config/targetLink.txt'
+link = 'https://en.it-jobs.de/'
 driver_path = 'driver/chromedriver'
 
 selectors = {}

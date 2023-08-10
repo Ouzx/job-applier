@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 from fake_useragent import UserAgent
 
-import scraper.strings as strs
+import config.main as config
 
 
 class Scraper:
@@ -14,7 +14,7 @@ class Scraper:
         self.driver = webdriver.Chrome(options=self.__get_options())
 
         self.applied_job_count = 0
-        self.link = Scraper.get_base_link()
+        self.link = config.link
 
         self.jobs = []
         self.page = 0  # 1?
@@ -23,11 +23,6 @@ class Scraper:
         self.driver.get(self.link)
         self.driver.maximize_window()
         print('Scraping...')
-
-    @ staticmethod
-    def get_base_link():
-        with open(strs.link_path, "r") as f:
-            return f.read()
 
     @ staticmethod
     def __get_options():
