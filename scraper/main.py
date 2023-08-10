@@ -23,9 +23,6 @@ class Scraper:
         ua = UserAgent()
         userAgent = ua.random
         options = webdriver.ChromeOptions()
-        options.add_argument('--disable-extensions')
-        options.add_argument('--disable-infobars')
-        options.add_argument('--disable-popup-blocking')
-        options.add_argument('--disable-notifications')
-
+        options.add_argument(f'user-agent={userAgent}')
+        options.add_experimental_option("excludeSwitches", ["enable-logging"])
         return options
