@@ -12,11 +12,22 @@ import scraper.strings as strs
 class Scraper:
     def __init__(self):
         self.driver = webdriver.Chrome(options=self.__get_options())
-        self.driver.get("https://www.google.com/")
-        self.driver.maximize_window()
+
+        self.applied_job_count = 0
+        self.link = Scraper.get_base_link()
+
+        self.jobs = []
+        self.page = 0  # 1?
 
     def scrape(self):
+        self.driver.get(self.link)
+        self.driver.maximize_window()
         print('Scraping...')
+
+    @ staticmethod
+    def get_base_link():
+        with open(strs.link_path, "r") as f:
+            return f.read()
 
     @ staticmethod
     def __get_options():

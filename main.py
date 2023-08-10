@@ -1,6 +1,6 @@
 from scraper.main import Scraper
 
-
-scraper = Scraper()
-scraper.scrape()
-scraper.driver.quit()
+if __name__ == '__main__':
+    scraper = Scraper()
+    scraper.scrape()
+    # scraper.driver.quit()

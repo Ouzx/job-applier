@@ -1,4 +1,4 @@
-link_path = 'config/link.txt'
+link_path = 'config/targetLink.txt'
 driver_path = 'driver/chromedriver'
 
 selectors = {}
