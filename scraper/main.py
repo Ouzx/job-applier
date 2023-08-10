@@ -1,8 +1,8 @@
 # import time
 
 from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
 from fake_useragent import UserAgent
 
@@ -20,9 +20,8 @@ class Scraper:
         self.page = 0  # 1?
 
     def scrape(self):
-        self.driver.get(self.link)
         self.driver.maximize_window()
-        print('Scraping...')
+        self.driver.get(self.link)
 
     def quit(self):
         self.driver.quit()

@@ -1,6 +1,14 @@
 link = 'https://en.it-jobs.de/'
 driver_path = 'driver/chromedriver'
 
+full_name = 'Oguzhan Kandakoglu'
+email = 'oguzhankandakoglu@gmail.com'
+resume_path = 'resume/Oguzhan-Kandakoglu-CV.pdf'
+
+place = 'München'
+tags = ['Frontend Developer', 'Backend Developer', 'Software Engineer', 'Fullstack-Entwickler/in', 'Full Stack Developer', 'Frontend',
+        'Backend', 'Java', 'C#', 'JavaScript', 'TypeScript', 'React', 'React Native', 'CSS', 'SCSS', 'Python', 'Node.js']
+
 selectors = {
     # initial form
     'place_text_box': '#plz-search-bar',
